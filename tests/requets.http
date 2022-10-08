@@ -1,8 +1,8 @@
 @table = tag
 @id = 3
 
-@body = {"Id_tag":3, "title":"tag update", "is_deleted":0}
-
+# @body = {"Id_tag":3, "title":"tag update", "is_deleted":0}
+@body = {"login":"remi@gmail.com","password":"azerty"}
 
 # @body = {"with": ["theme", "appUser", {"tag":"article_tag"}] }
 
@@ -53,3 +53,12 @@ PATCH http://blog.api/{{table}}/{{id}}
 
 ###
 DELETE http://blog.api/{{table}}/{{id}}
+
+
+###
+POST http://blog.api/auth/login
+Content-Type: application/json
+
+{{body}}
+
+### get all with relations
