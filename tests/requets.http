@@ -2,7 +2,7 @@
 @id = 3
 
 # @body = {"Id_tag":3, "title":"tag update", "is_deleted":0}
-@body = {"login":"remi@gmail.com","password":"azerty"}
+@body = {"login":"remi@gmail.com","password":"Azerty"}
 
 # @body = {"with": ["theme", "appUser", {"tag":"article_tag"}] }
 

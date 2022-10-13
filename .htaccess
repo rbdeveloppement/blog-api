@@ -1,4 +1,4 @@
-Deny from all
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 

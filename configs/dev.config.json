@@ -8,5 +8,13 @@
     },
     "hash": {
         "prefix": "$argon2id$v=19$m=12,t=2,p=1$"
+    },
+    "jwt" : {
+        "secret": "hAgBizEu5Z6q1234J"
+    },
+    "restriced" : {
+        "GET/appUser": "$userRole ==1;",
+        "GET/appUser/:id": "$userRole == 1 || $userId == $id;",
+        "GET/comment": "$userRole > 0;"
     }
 }

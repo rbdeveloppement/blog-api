@@ -1,0 +1,7 @@
+{
+    "name": "pc/blog-api",
+    "description": "blog-api",
+    "require": {
+        "firebase/php-jwt": "^6.0"
+    }
+}
