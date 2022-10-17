@@ -62,3 +62,7 @@ Content-Type: application/json
 {{body}}
 
 ### get all with relations
+
+POST http://bmog.api/auth/register
+Content-Type: application/json
+{{body}}

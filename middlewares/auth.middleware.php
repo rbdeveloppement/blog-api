@@ -17,7 +17,7 @@ class AuthMiddleware{
             $restricted = str_replace("id", $this->id, $k);
             if($restricted == $req){
                 $this->condition = $v;
-                break
+                break;
         }
     }
 }
@@ -25,7 +25,7 @@ class AuthMiddleware{
 public function verify(){
     if(isset($this->condition)){
         $headers = apache_request_headers();
-        if(isset($headers["Authorizaton"])){
+        if(isset($headers["Authorization"])){
             $token = $headers["Authorization"];
         }
         $secretKey = $_ENV['config']->jwt->secret;
@@ -41,10 +41,10 @@ public function verify(){
                 $payload->exp > time()
             ){
                 $userRole = $payload->userRole;
-                $userId = $payload->UserId;
+                $userId = $payload->userId;
                 $id = $this->id;
                 $test = false;
-                eval("\$test=".this->condition);
+                eval("\$test=".$this->condition);
                 if($test){
                     return true;
                 }
